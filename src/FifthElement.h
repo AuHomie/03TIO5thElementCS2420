@@ -5,8 +5,8 @@
 
 //template <class Type>
 
-/*T
-ype getFifthElement(); This method returns the data at the fifth node (not index) of the linked list.
+/*
+Type getFifthElement(); This method returns the data at the fifth node (not index) of the linked list.
  It will throw a length error (i.e. throw length_error("There is no fifth element");) if there is no fifth element in the list
 
 void insertNewFifthElement(const Type &value); This method inserts a node containing a value between the existing 4 and 5 nodes 
