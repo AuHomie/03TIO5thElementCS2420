@@ -7,6 +7,19 @@
 //template <class Type>
 
 /*
+template <class Type>
+class FifthElement(){
+    public:
+
+    protected: 
+
+
+}
+
+template<class Type>
+class FifthElement :: public LinkedList {
+
+template<class Type>
 Type getFifthElement(){
 if ( list size !=5 ){
 throw length_error("There is no fifth element";
@@ -18,6 +31,7 @@ This method returns the data at the fifth node (not index) of the linked list.
 It will throw a length error (i.e. throw length_error("There is no fifth element");) if there is no fifth element in the list
 ********
 
+template<class Type>
 void insertNewFifthElement(const Type &value){
 addafter(linkedList)
 }
@@ -26,6 +40,7 @@ This method inserts a node containing a value between the existing 4 and 5 nodes
 so that the original 5th node becomes the 6th node in the list. If there are only 4 nodes in the list, the new node will become the last node in the list. 
 ******
 
+template<class Type>
 void deleteFifthElement(){
 
 }
@@ -35,7 +50,7 @@ void deleteFifthElement(){
 If there was no 6th node, the 4th node becomes the new back node. 
 ****
 
-
+template<class Type>
 void swapFourthAndFifthElement(){
 
 }
