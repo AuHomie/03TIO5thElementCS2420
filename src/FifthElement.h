@@ -13,9 +13,9 @@ class FifthElement : public LinkedList<Type>{
 
     Type getFifthElement(){
 
-    Node<Type>* currentNode = front;
+    Node<Type>* currentNode = this->front;
 
-    if (count < 5 ){
+    if (this->count < 5 ){
     throw length_error("There is no fifth element");
     }else {
         for (int i =0; i < 4; i++){
@@ -27,9 +27,9 @@ class FifthElement : public LinkedList<Type>{
        
         Node<Type>* temp = new Node<Type>();  
         temp->data = value; 
-        Node<Type>* currentNode = front;
+        Node<Type>* currentNode = this->front;
 
-        if(count < 4 ){
+        if(this->count < 4 ){
             throw length_error("There is not that many elements in this list");
         }
 
@@ -41,14 +41,14 @@ class FifthElement : public LinkedList<Type>{
             currentNode->next = temp;
 
         if(temp->next == nullptr){
-         back = temp;
+         this->back = temp;
         }
-        count ++;
+        this->count ++;
     }
 
     void deleteFifthElement(){
 
-        Node<Type>* currentNode = front;
+        Node<Type>* currentNode = this->front;
 
 
         if (count < 5 ){
@@ -61,14 +61,14 @@ class FifthElement : public LinkedList<Type>{
 
        Node<Type>* toDelete = currentNode->next;
         if (toDelete->next == nullptr){
-        back = currentNode;    
+        this->back = currentNode;    
         }
 
         currentNode->next = toDelete->next;
 
         delete toDelete;
 
-        count --;
+        this->count --;
     }
     protected: 
 
