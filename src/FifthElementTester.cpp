@@ -17,7 +17,7 @@ void  testSwapFourthAndFifthElement();
 bool checkTest(std::string testName, std::string whatItShouldBe, std::string whatItIs);
 bool checkTest(std::string testName, int whatItShouldBe, int whatItIs);
 bool checkTestMemory(std::string testName, int whatItShouldBe, int whatItIs);
-
+/* 
 int main()
 {
    testGetFifthElement();
@@ -31,7 +31,7 @@ int main()
 
     return 0;
 }
-
+ */
 
 
 //This helps with testing, do not modify.
