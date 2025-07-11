@@ -61,11 +61,10 @@ class FifthElement : public LinkedList<Type>{
 
        Node<Type>* toDelete = currentNode->next;
         if (toDelete->next == nullptr){
-        back = temp;    
+        back = currentNode;    
         }
 
         currentNode->next = toDelete->next;
-
 
         delete toDelete;
 
