@@ -70,33 +70,36 @@ class FifthElement : public LinkedList<Type>{
 
         this->count --;
     }
-    protected: 
+    
+    void swapFourthAndFifthElement(){
 
+        Node<Type>* currentNode = this->front;
+
+        if (count < 5 ){
+        throw length_error("There is no fifth element");
+        }
+        
+        for (int i = 0; i < 2; i++) {
+            currentNode = currentNode->next;
+        }
+        Node<Type>*third = currentNode;
+        Node<Type>* fourth = third->next;
+        Node<Type>* fifth = fourth->next;
+        Node<Type>* sixth = fifth->next;
+       
+        third->next = fifth;
+        fifth->next = fourth;
+        fourth->next = sixth;
+
+        if (fourth->next == nullptr){
+            this->back = fourth;
+        }
+    }
 
 };
 
 
 /*
-
-length_error("There is no fifth element to delete")
-
-
-*****
-
-template<class Type>
-void deleteFifthElement(){
-
-}
-
-
-;This method deletes the 5th node. If there was a 6th node, the 4th node now points to the 6th node. 
-If there was no 6th node, the 4th node becomes the new back node. 
-****
-
-template<class Type>
-void swapFourthAndFifthElement(){
-
-}
 
 ; This method rearranges the 4th and 5th nodes. It cannot swap the data in the nodes, it instead must rearrange pointers.
 
