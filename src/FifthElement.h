@@ -46,7 +46,31 @@ class FifthElement : public LinkedList<Type>{
         count ++;
     }
 
+    void deleteFifthElement(){
 
+        Node<Type>* currentNode = front;
+
+
+        if (count < 5 ){
+        throw length_error("There is no fifth element");
+        }
+        
+        for (int i = 0; i < 3; i++) {
+            currentNode = currentNode->next;
+        }
+
+       Node<Type>* toDelete = currentNode->next;
+        if (toDelete->next == nullptr){
+        back = temp;    
+        }
+
+        currentNode->next = toDelete->next;
+
+
+        delete toDelete;
+
+        count --;
+    }
     protected: 
 
 
@@ -55,7 +79,7 @@ class FifthElement : public LinkedList<Type>{
 
 /*
 
-
+length_error("There is no fifth element to delete")
 
 
 *****
