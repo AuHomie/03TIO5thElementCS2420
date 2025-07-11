@@ -3,7 +3,6 @@
 #include "LinkedList.h"
 
 //Ausha Homer
-
 //template <class Type>
 
 
