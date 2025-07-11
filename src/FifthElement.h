@@ -99,10 +99,4 @@ class FifthElement : public LinkedList<Type>{
 };
 
 
-/*
-
-; This method rearranges the 4th and 5th nodes. It cannot swap the data in the nodes, it instead must rearrange pointers.
-
-*/
-
 #endif // FIFTHELEMENT_H
