@@ -27,18 +27,19 @@ class FifthElement : public LinkedList<Type>{
     void insertNewFifthElement(const Type &value){
        
         Node<Type>* temp = new Node<Type>();  
-        temp->data = value;                   
+        temp->data = value; 
         Node<Type>* currentNode = front;
-        
+
         if(count < 4 ){
             throw length_error("There is not that many elements in this list");
         }
 
         for (int i = 0; i < 3; i++) {
             currentNode = currentNode->next;
+        }
+            
             temp->next = currentNode->next;
             currentNode->next = temp;
-        }
 
         if(temp->next == nullptr){
          back = temp;
@@ -46,11 +47,6 @@ class FifthElement : public LinkedList<Type>{
         count ++;
     }
 
-}
-/*
-This method inserts a node containing a value between the existing 4 and 5 nodes 
-so that the original 5th node becomes the 6th node in the list. If there are only 4 nodes in the list, the new node will become the last node in the list. 
-*/
 
     protected: 
 
